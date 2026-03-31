@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .topbar {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .profile-card {
+            background: white;
+            padding: 20px;
+            margin: 30px auto;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .avatar {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="topbar">
+    <h3>👤 Profile</h3>
+</div>
+
+<div class="profile-card">
+    <div class="avatar">👤</div>
+    <h3>{{ email }}</h3>
+
+    <p>Logged in user</p>
+
+    <a href="/home">🏠 Back to Home</a><br>
+    <a href="/logout">🚪 Logout</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Hunter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <h2>🚀 Find Jobs Near You</h2>
+    </div>
+
+    <div class="container">
+
+        <h1>💼 Job Hunter</h1>
+
+        <div class="top-bar">
+            <a href="/add" class="btn">+ Add Job</a>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="search-box">
+            <form method="POST">
+                <input type="text" name="location" placeholder="Enter location..." value="{{ location }}">
+                <button type="submit" class="btn">Search</button>
+            </form>
+        </div>
+
+        <!-- JOBS -->
+        <div class="jobs">
+
+            {% if jobs %}
+                {% for job in jobs %}
+                    <div class="job-card">
+                        <h2>{{ job[1] }}</h2>
+                        <p class="location">📍 {{ job[2] }}</p>
+                        <p>💰 {{ job[3] }}</p>
+                        <p>📞 {{ job[4] }}</p>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="no-jobs">
+                    <h2>😔 No Jobs Found</h2>
+                    <p>Try a different location</p>
+                </div>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p>© 2026 Job Hunter | Built by Akash 🚀</p>
+    </div>
+
+</body>
+</html>
+<script src="{{ url_for('static', filename='app.js') }}"></script>

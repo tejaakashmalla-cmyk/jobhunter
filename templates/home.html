@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .profile-btn {
+            background: white;
+            color: #007bff;
+            padding: 6px 12px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .nav-links a {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="topbar">
+    <h3>🚀 JobHunter</h3>
+    <a href="/profile" class="profile-btn">👤 Profile</a>
+</div>
+
+<div class="container">
+    <h2>Welcome {{ session['user'] }}</h2>
+
+    <div class="nav-links">
+        <a href="/add">➕ Add Job</a>
+        <a href="/search">🔍 Search Job</a>
+        <a href="/logout">🚪 Logout</a>
+    </div>
+</div>
+
+</body>
+</html>

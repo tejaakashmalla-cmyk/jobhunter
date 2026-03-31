@@ -1,0 +1,94 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: #f3f6f8;
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* PAGE ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* NAVBAR */
+.navbar {
+    background: #0a66c2;
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* CONTAINER */
+.container {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* BUTTON */
+.btn {
+    background: #0a66c2;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #004182;
+    transform: scale(1.05);
+}
+
+/* INPUT */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* LINKS */
+.link-btn {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px 15px;
+    background: white;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #0a66c2;
+    border: 1px solid #0a66c2;
+    transition: 0.3s;
+}
+
+.link-btn:hover {
+    background: #0a66c2;
+    color: white;
+    transform: translateY(-2px);
+}

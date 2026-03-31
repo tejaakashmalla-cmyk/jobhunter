@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Saved Jobs</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">Saved Jobs ❤️</div>
+
+<div class="container">
+
+{% for job in jobs %}
+<div class="card">
+    <h3>{{ job[1] }}</h3>
+    <p>{{ job[2] }}</p>
+    <p>{{ job[3] }}</p>
+    <p>{{ job[5] }}</p>
+</div>
+{% endfor %}
+
+</div>
+
+</body>
+</html>

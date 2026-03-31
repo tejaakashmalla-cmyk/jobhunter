@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Signup</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+<h1>📝 Signup</h1>
+
+<form method="POST" class="job-form">
+<input type="text" name="username" placeholder="Username" required>
+<input type="password" name="password" placeholder="Password" required>
+<button class="btn">Signup</button>
+</form>
+
+</div>
+
+</body>
+</html>
+<script src="{{ url_for('static', filename='app.js') }}"></script>

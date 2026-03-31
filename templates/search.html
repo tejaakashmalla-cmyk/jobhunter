@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Search Jobs</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">Find Jobs 🔍</div>
+
+<div class="container">
+
+<form method="POST">
+<input type="text" name="location" placeholder="Location">
+<input type="text" name="education" placeholder="Education">
+<button class="btn">Search</button>
+</form>
+
+<h2>⭐ Recommended Jobs</h2>
+
+{% for job in recommended %}
+<div class="card">
+    <h3>{{ job[1] }}</h3>
+    <p>{{ job[2] }}</p>
+    <p>{{ job[3] }}</p>
+    <p>{{ job[5] }}</p>
+    <a href="/save/{{ job[0] }}" class="btn">❤️ Save</a>
+</div>
+{% endfor %}
+
+<h2>Other Jobs</h2>
+
+{% for job in others %}
+<div class="card">
+    <h3>{{ job[1] }}</h3>
+    <p>{{ job[2] }}</p>
+    <p>{{ job[3] }}</p>
+    <p>{{ job[5] }}</p>
+    <a href="/save/{{ job[0] }}" class="btn">❤️ Save</a>
+</div>
+{% endfor %}
+
+<a href="/saved" class="link-btn">📌 View Saved Jobs</a>
+
+</div>
+
+</body>
+</html>
