@@ -12,7 +12,6 @@ app.secret_key = "secret123"
 def index():
     if 'user' in session:
         return redirect('/home')
-    return redirect('/login')
 
 # ================= DATABASE =================
 def init_db():
