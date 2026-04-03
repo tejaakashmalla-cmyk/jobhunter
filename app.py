@@ -1,6 +1,4 @@
-@app.route('/')
-def index():
-    return redirect('/home')
+
 from flask import Flask, render_template, request, redirect, session
 import sqlite3
 import random
@@ -9,6 +7,12 @@ from email.mime.text import MIMEText
 
 app = Flask(__name__)
 app.secret_key = "secret123"
+
+@app.route('/')
+def index():
+    if 'user' in session:
+        return redirect('/home')
+    return redirect('/login')
 
 # ================= DATABASE =================
 def init_db():
