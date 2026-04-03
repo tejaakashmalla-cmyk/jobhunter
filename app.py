@@ -12,7 +12,17 @@ app.secret_key = "secret123"
 def index():
     if 'user' in session:
         return redirect('/home')
-
+     return redirect('/login')
+     
+     @app.route('/login')   
+     def login():
+         return render_template('login.html')
+     
+     @app.route('/home')
+def home():
+    if 'user' not in session:
+        return redirect('/login')
+    return render_template('home.html')
 # ================= DATABASE =================
 def init_db():
     conn = sqlite3.connect('jobs.db')
